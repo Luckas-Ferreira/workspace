@@ -1,0 +1,77 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <app-button (clickButtonEvent)="test()" label="Opam" labelType="primary"></app-button>
+  <app-new [lorem]="email" (clickEvent)="lorem()"></app-new>
+  <div id="container">
+      <form class="max-w-xl mx-auto">
+      <ion-grid class="m-4">
+        <ion-row>
+          <ion-col size="12" sizeSm="6" class="bg-white">
+           
+            <canvas #canvas id="myCanvas" width="800" height="600"></canvas>
+
+          </ion-col>
+          <ion-col size="12" sizeSm="6">
+            
+              <div class="mb-5">
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+                <input [(ngModel)]="email" type="email" id="email" name="email"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="name@flowbite.com" required />
+              </div>
+              
+          </ion-col>
+          <ion-col size="12" sizeSm="6">
+            <app-button label="Desenhar" (clickButtonEvent)="enableDrawing()"></app-button>
+            <app-button label="Movimentar Imagem" (clickButtonEvent)="enableImageMovement()"></app-button>
+            <div class="mb-5">
+              <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your text</label>
+              <input type="text" id="text"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="name@flowbite.com" required />
+            </div>
+           
+          </ion-col>
+          <ion-col size="12">
+            <div class="flex items-start mb-5">
+              <div class="flex items-center h-5">
+                <input id="remember" type="checkbox" value=""
+                  class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+                  required />
+              </div>
+              <label for="remember" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div class="mb-5">
+              <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
+              <input type="password" id="password"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                required />
+            </div>
+          </ion-col>
+          <ion-col class="grid gap-2" size="12">
+              <button routerLink="/cadastrar" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">
+                Login
+              </button>
+          </ion-col>
+    
+        </ion-row>
+     
+      </ion-grid>
+    </form>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,15 @@
+<p>{{test}}</p>
+
+<h2 *ngIf="isTrue; else noTrue">
+    é verdadeiro
+</h2>
+
+<ng-template #noTrue>
+    não é verdadeiro
+</ng-template>
+<hr>
+<hr>
+<input [(ngModel)]="dadosform" id="example-ngModel">
+
+
+<h1>{{dadosform}}</h1>
